@@ -246,12 +246,12 @@
 
         <div class="row file-row">
           <label class="field-label">DNI del administrador (archivo) <span class="required">*</span></label>
-          <input type="file" name="DNI administrador (archivo)" accept=".pdf,.jpg,.jpeg,.png">
+          <input type="file" name="DNI_administrador_archivo" accept=".pdf,.jpg,.jpeg,.png">
         </div>
 
         <div class="row file-row">
           <label class="field-label">CIF (archivo) <span class="required">*</span></label>
-          <input type="file" name="CIF (archivo)" accept=".pdf,.jpg,.jpeg,.png">
+          <input type="file" name="CIF_archivo" accept=".pdf,.jpg,.jpeg,.png">
         </div>
       </fieldset>
 
@@ -291,7 +291,7 @@
 
         <div class="row file-row">
           <label class="field-label">DNI (archivo) <span class="required">*</span></label>
-          <input type="file" name="DNI (archivo)" accept=".pdf,.jpg,.jpeg,.png">
+          <input type="file" name="DNI_archivo" accept=".pdf,.jpg,.jpeg,.png">
         </div>
       </fieldset>
 
@@ -317,11 +317,11 @@
     fsAutonomo.classList.toggle('active', !esEmpresa);
 
     camposDe(fsEmpresa).forEach(function(el){
-      if(el.type !== 'file'){ el.required = esEmpresa; }
+      el.required = esEmpresa;
       el.disabled = !esEmpresa;
     });
     camposDe(fsAutonomo).forEach(function(el){
-      if(el.type !== 'file'){ el.required = !esEmpresa; }
+      el.required = !esEmpresa;
       el.disabled = esEmpresa;
     });
   }
